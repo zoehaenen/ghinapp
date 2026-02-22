@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Surveillance Poster</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="index.js" defer></script>
+</head>
+<body>
+<main class="wrap">
+  <h1>Surveillance</h1>
+  <p class="hint">Tik op “Open camera”.</p>
+
+  <!-- Belangrijk: iOS/Safari vereist meestal user gesture (klik) -->
+  <button id="startBtn">Open camera</button>
+
+  <div class="stage" aria-label="camera preview">
+    <video id="video" playsinline muted></video>
+
+    <!-- optioneel: overlay UI -->
+    <div class="overlay">
+      <div class="reticle"></div>
+      <div class="label">REC ●</div>
+      <div class="small">Face scan…</div>
+    </div>
+  </div>
+
+  <p class="fineprint">Camera wordt enkel lokaal weergegeven. Er wordt niets opgeslagen.</p>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
